@@ -1,0 +1,283 @@
+/* COLORS */
+:root {
+    --primary: #A1A3A6;
+    --primaryDark: #92959e;
+    --secundary: #04ADBF;
+    --terciary: #2EF2F2;
+    --dark: #262626;
+    --black: #0D0D0D;
+    --light: #F2F2F2;
+    --principalFont: 'Montserrat', sans-serif;
+    --secundaryFont: 'Hind Madurai', sans-serif;
+}
+
+/* COLORS */
+
+html {
+    box-sizing: border-box;
+    font: 62.5%;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+
+/* ESTILOS GENERALES */
+body{
+    background-color: var(--primary);
+    font: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: var(--secundaryFont)
+    /* color: var(--terciary); */
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--terciary);
+    font-family: var(--principalFont);   
+}
+
+h1{font-size: 4rem;}
+
+h2{font-size: 3.2rem;}
+
+h3{font-size: 2.4rem;}
+/* ESTILOS GENERALES */
+
+body{
+    text-align: center;
+}
+
+/* HEADER */
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__logo{
+        margin: 1rem 0;
+    }
+
+/* HEADER */
+
+
+/* FOOTER */
+.footer{
+    background-color: var(--dark);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__text{
+    font-family: var(--principalFont);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--terciary);
+}
+/* FOOTER */
+
+
+/* MENÚ */
+.menu{
+    background-color: var(--dark);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu__a{
+    font-family: var(--principalFont);
+    color: var(--light);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu__a--active,
+.menu__a:hover{
+    color: var(--terciary);    
+}
+/* MENÚ */
+
+/* GRID */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* GRID */
+
+/* PRODUCTOS */
+.product{
+    background-color: var(--primaryDark);
+    padding: 1rem;    
+}
+
+.product__name{
+    font-size: 3rem;
+    color: var(--light);
+}
+
+.product__price{
+    font-size: 2rem;
+    color: var(--terciary);
+    font-family: var(--secundaryFont);
+}
+
+.product__name,
+.product__price{
+    font-family: var(--principalFont);
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+/* PRODUCTOS */
+
+
+/* GRÁFICOS */
+
+.graphic{
+    min-height: 30rem;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+
+.graphic--shirt{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);     
+}
+
+.graphic--node{
+    background-image: url(../img/grafico2.jpg);    
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px) {
+    .graphic--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+/* GRÁFICOS */
+
+
+
+
+/* NOSOTROS */
+.about{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .about{        
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.about__image{
+    grid-row: 1 / 2;    
+}
+
+@media (min-width: 768px) {
+    .about__image{
+        grid-column: 2 / 3;
+    }
+}
+/* NOSOTROS */
+
+
+
+/* BLOQUES */
+.blocks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .blocks{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.block{
+    text-align: center;
+}
+
+.block__title{
+    margin: 0;
+}
+/* BLOQUES */
+
+
+
+/* PÁGINA PRODUCTO */
+@media (min-width: 768PX) {
+    .shirt{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.form__camp{
+    border: 1rem solid var(--primaryDark);
+    background-color: transparent;
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+
+.form__submit{
+    background-color: var(--terciary);
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-family: var(--principalFont);
+    padding: 2rem;
+    font-weight: bold;
+    transition: background-color 300ms ease;   
+    grid-column: 1 / 3;
+}
+
+.form__submit:hover{    
+    cursor: pointer;
+    background-color: var(--light);
+}
+/* PÁGINA PRODUCTO */
